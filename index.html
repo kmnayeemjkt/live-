@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Video Player Custom Html5 &amp; Scss</title>
+  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.13.0/css/all.css'>
+<link rel='stylesheet' href='https://astronautweb.co/wp-content/themes/astronaut-2014/css/font-awesome-4.7.0.css'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Quicksand&amp;display=swap'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<body>
+		<div class="container">
+			<h1 class="hoverme">Hover Video Player Custom Html5 & Scss</h1>
+			<div class="c-video">
+				<div class="loader"></div>
+				<video
+				autoplay="autoplay" muted="muted" loop="loop" playsinline="playsinline" preload="metadata" data-aos="fade-up"
+					ondblclick="toggleFullScreen()"
+					id="video"
+					class="video"
+					src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+				></video>
+
+				<div class="controls">
+					<div class="buttons">
+						<button id="play-pause"></button>
+					</div>
+					<div id class="orange-bar">
+						<input
+							type="range"
+							name="timeplay"
+							id="timeplay"
+							step="0.01"
+							class="__range"
+							min="0.0"
+							onchange="scrollVideo(this.value)"
+							id=""
+						/>
+						<output
+							id="bubble"
+							style="
+								position: absolute;
+								color: black;
+								margin-top: -30px;
+								background: rgba(255, 255, 255, 0.835);
+								border-radius: 2px;
+								visibility: hidden;
+								padding: 5px;
+							"
+							for="timeplay"
+							class="bubble"
+							onforminput="value = timeplay.valueAsNumber;"
+							>0:0</output
+						>
+						<div class="buttonsvolume">
+							<button id="volume"></button>
+							<input
+								type="range"
+								id="vol"
+								class="inputvolumn"
+								name="vol"
+								min="0"
+								step="0.1"
+								value="100"
+								max="100"
+							/>
+						</div>
+						<div class="setting">
+							<i
+								class="fa fa-cog"
+								style="color: white; font-size: 20px; padding: 5px;"
+								aria-hidden="true"
+							></i>
+							<div class="setting-menu">
+								<div class="header">
+									<p style="display: inline-block;">Quality</p>
+									<p id="qualityvideo" style="display: inline-block;">720p</p>
+								</div>
+								<ul id="list-q" class="list-q" style="list-style-position: inside;">
+									<li id='auto' style="padding: 5px 10px;">Auto</li>
+
+									
+								</ul>
+							</div>
+						</div>
+						<div class="fullscreen">
+							<button class="fullscreenbtn" id="fullscreenbtn"></button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</body>
+<!-- partial -->
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
